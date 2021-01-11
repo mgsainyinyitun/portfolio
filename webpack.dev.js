@@ -11,8 +11,14 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      //filename:'template.html',
       template: './src/template.html',
       favicon: './src/assets/favicon.png'
+    }),
+    new HtmlWebpackPlugin({
+      filename:'resume.html',
+      template: './src/resume.html',
+      chunks:[]
     })
   ],
   module: {
